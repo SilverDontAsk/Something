@@ -7,4 +7,9 @@ function OnGameEvent_player_spawn(params) {
     printl(player.GetPlayerName() + " spawned!")
 }
 
+DebugPrint <- function(text) {
+    printl("**DEBUG**: " + text);
+    ClientPrint(null, 3, text); // Shows in HUD
+}
+
 __CollectGameEventCallbacks(this)
